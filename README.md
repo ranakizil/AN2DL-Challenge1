@@ -1,5 +1,14 @@
-# First Challenge of the PoliMi course of Artificial Neural Networks and Deep Learning, 2025
+# Multivariate Time Series Pain Level Classification
 
-## Multivariate Time Series Classification on Pirate Pain Levels
+Time series classification model built for the AN2DL Challenge at Politecnico di Milano. The goal is to predict human pain levels (No Pain, Low Pain, High Pain) from 160-step sequences of joint angles, survey indicators, and static features.
 
-In this challenge, we tackled a **multivariate time series classification task** to predict pain levels (**no pain**, **low pain**, **high pain**) from 180-step sequential data comprising body joints, survey metrics, and metadata. By experimenting with preprocessing, rebalancing, and a custom **1D CNN + BiLSTM** model, we identified our best-performing approach (`03_SMOTE_Only`). Utilizing standard scaling, SMOTE, and a macro F1 callback, this streamlined model outperformed more complex configurations, achieving an impressive validation macro F1-score of **0.9681** and a weighted F1-score of **0.9834**.
+## Overview
+
+- **Architecture:** Compact 1D CNN + BiLSTM hybrid trained from scratch.
+- **Class Imbalance:** Applied SMOTE on flattened sequence features to handle minority class distribution.
+- **Preprocessing:** Cleaned missing values, aggregated static features, and standardized joint motion sequences.
+- **Results:** Evaluated 25 setups, achieving a peak validation macro F1-score of **0.968** with the `03_SMOTE_Only` configuration.
+
+## Team
+
+Merve Rana Kızıl, Selahattin Cem Öztürk, İsmail Emre Gümüş, Emre Evcin
